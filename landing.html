@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAMA Group Soc. Coop. - Digital Card</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --brand-color: #4F6F64;
+            --glass-bg: rgba(79, 111, 100, 0.4);
+            --glass-border: rgba(255, 255, 255, 0.2);
+            --text-color: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            /* Sfondo con gradiente che richiama il settore ristrutturazioni (cemento/architettura) */
+            background: linear-gradient(135deg, #1a1a1a 0%, #4F6F64 100%);
+            background-attachment: fixed;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+            color: var/(--text-color);
+        }
+
+        /* Header con Logo */
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        .logo {
+            width: 150px;
+            height: auto;
+            object-fit: contain;
+        }
+
+        /* Container Glassmorphism */
+        .card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 30px 20px;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        /* Pulsanti */
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            color: white;
+            text-decoration: none;
+            font-weight: 400;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .btn i {
+            margin-right: 10px;
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: 30px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+            color: white;
+            animation: fadeIn 1.5s ease-in;
+        }
+
+        /* Animazioni */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Ottimizzazione Mobile */
+        @media (max-width: 480px) {
+            .card {
+                padding: 20px 15px;
+            }
+            .logo {
+                width: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <img src="logo.png" alt="SAMA Group Logo" class="logo">
+    </div>
+
+    <div class="card">
+        <a href="https://samagroupsoccoop.it" class="btn" target="_blank">🌐 Sito Web</a>
+        <a href="tel:+393911490561" class="btn">📞 Telefono</a>
+        <a href="mailto:samagroupsoccoop@gmail.com" class="btn">📧 Email</a>
+        <a href="https://www.facebook.com/search/top?q=sa.ma%20soc.coop." class="btn" target="_blank">📘 Facebook</a>
+        <a href="https://www.instagram.com/samagrouppp" class="btn" target="_blank">📸 Instagram</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=via+fiume+100+belpasso" class="btn" target="_blank">📍 Vieni a trovarci! </a>
+    </div>
+
+    <div class="footer">
+        Powered by: <strong>@peppvision</strong>
+    </div>
+
+</body>
+</html>
+
+
